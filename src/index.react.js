@@ -6,6 +6,9 @@ var $ = jQuery = require('jquery'); var jQuery = $;
 var React = require('react');
 var ReactDOM = require('react-dom');
 
+// Data/Flux
+var AppDispatcher = require('./js/data/dispatcher');
+
 // Components
 var Header = require('./js/components/common/header.react');
 
@@ -24,6 +27,7 @@ class App extends React.Component {
         );
     }
 }
+
 
 // Routing
 var router = {

@@ -32,5 +32,8 @@
     "react-router": "^4.1.1",
     "slurp-req": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
+  },
+  "devDependencies": {
+    "del": "^2.2.2"
   }
 }

@@ -16,10 +16,13 @@ var m = {
     concat: 'gulp-concat',
     // linting
     lint: 'gulp-eslint',
-    // ES6/ES2015 support + JSX compiling
-    babel: 'babelify'
+    // ES6/ES2015 suppor,t + JSX compiling
+    babel: 'babelify',
+    // delete files + directories
+    del: 'del'
 };
 
+// Slurp up required modules
 m = slurp(m);
 
 // gulp
@@ -112,10 +115,17 @@ gulp.task('css', function(){
 });
 
 // linting
+// TODO: Implement eslint task
 gulp.task('lint', function(){
 
 });
 
+
+gulp.task('clean', function(){
+    m.del(["dist/**"]).then(function(paths){
+        console.log('Deleted files ' + paths.join(','));
+    });
+});
 
 // default task
 gulp.task('default', ['html','images','css','js','lint','server-open','server-watch']);
