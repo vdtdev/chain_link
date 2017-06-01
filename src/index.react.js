@@ -3,14 +3,16 @@
 var $ = jQuery = require('jquery'); var jQuery = $;
 
 // React Modules
-var React = require('react');
-var ReactDOM = require('react-dom');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 // Data/Flux
-var AppDispatcher = require('./js/data/dispatcher');
+var AppDispatcher = require('./js/dispatcher');
 
 // Components
 var Header = require('./js/components/common/header.react');
+var User = require('./js/components/users/user.react');
 
 // Index Component, passes route along to Header page prop
 class App extends React.Component {
@@ -21,7 +23,8 @@ class App extends React.Component {
                 <Header page={this.props.route}/>
             </div>
             <div className="row">
-                Placeholder
+                <Router>
+                </Router>
             </div>
             </div>
         );
