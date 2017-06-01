@@ -72,7 +72,7 @@ gulp.task('server-open',['server-connect'], function(){
 gulp.task('server-watch', function(){
     gulp.watch(config.paths.html, ['html']);
     gulp.watch(config.paths.css, ['css', 'js']);
-    gulp.watch(config.paths, ['js']);
+    gulp.watch(config.paths.js, ['js']);
 });
 
 
