@@ -36,11 +36,13 @@ var config = {
         html: './src/*.html',
         dist: './dist',
         js: [
-            './src/**/*.js'
+            './src/**/*.js',
+            './node_modules/foundation-sites/dist/js/foundation.min.js'
             // TODO: put UX framework scripts here
         ],
         css: [
             // TODO: Add UX Framework CSS here
+            './node_modules/foundation-sites/dist/css/foundation.min.css',
             './src/css/**/*.css'
         ],
         index: './src/index.react.js',
@@ -104,9 +106,8 @@ gulp.task('js', function(){
 
 // Package CSS files
 gulp.task('css', function(){
-    console.log(config.bundles.css);
     gulp.src(config.paths.css)
-        .pipe(m.concat(config.bundles.css))
+        .pipe(m.concat('bundle.css'))
         .pipe(gulp.dest(config.paths.dist + '/css'));
 });
 

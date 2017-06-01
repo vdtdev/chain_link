@@ -8,6 +8,7 @@ The React portion of Chain Link app, providing the UI, routing, and databinding 
 
 ## Technologies
 
-- React
+- React, ReactDOM, ReactRouter
 - Flux
 - Gulp
+- Foundation

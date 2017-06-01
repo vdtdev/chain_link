@@ -6,10 +6,22 @@ var $ = jQuery = require('jquery'); var jQuery = $;
 var React = require('react');
 var ReactDOM = require('react-dom');
 
-// Index Component
-export class App extends React.Component {
+// Components
+var Header = require('./js/components/common/header.react');
+
+// Index Component, passes route along to Header page prop
+class App extends React.Component {
     render(){
-        return (<b>Placeholder</b>);
+        return (
+            <div>
+            <div className="row">
+                <Header page={this.props.route}/>
+            </div>
+            <div className="row">
+                Placeholder
+            </div>
+            </div>
+        );
     }
 }
 
