@@ -3,7 +3,7 @@
 "use strict";
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+// import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 // User components
 import UserEdit from './edit.react';
@@ -17,12 +17,16 @@ class UserController extends React.Component {
     }
     render(){
 
-        return (
+        /*return (
+            <div><b>USERS</b>
             <Router>
                 <Route path="/user" component={UserShow} />
                 <Route path="/user/edit" component={UserEdit} />
                 <Route path="/user/register" component={UserRegister} />
-            </Router>
+            </Router></div>
+        );*/
+        return (
+            <div><b>USERS</b></div>
         );
 
     }

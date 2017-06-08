@@ -123,7 +123,7 @@ gulp.task('lint', function(){
 
 gulp.task('clean', function(){
     m.del(["dist/**"]).then(function(paths){
-        console.log('Deleted files ' + paths.join(','));
+        console.log('Clean removed the following:\n\t' + paths.join('\n\t'));
     });
 });
 
